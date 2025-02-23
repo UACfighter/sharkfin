@@ -1,0 +1,12 @@
+<h1>Comment</h1>
+<p>
+  <strong>Post:</strong> <%= @comment.post.title %>
+</p>
+<p>
+  <strong>User:</strong> <%= @comment.user.name %>
+</p>
+<p>
+  <strong>Content:</strong> <%= @comment.content %>
+</p>
+<%= button_to 'Edit', edit_comment_path(@comment), method: :get, form: { class: 'inline-button' } %>
+<%= button_to 'Back', comments_path, method: :get, form: { class: 'inline-button' } %>

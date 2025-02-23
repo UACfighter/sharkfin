@@ -1,0 +1,31 @@
+<%= form_with(model: @profile, local: true) do |form| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <ul>
+        <% @profile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id, "User" %>
+    <%= form.collection_select :user_id, User.all, :id, :name, prompt: "Select User" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_id, "Country" %>
+    <%= form.collection_select :country_id, Country.all, :id, :name, prompt: "Select Country" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :biography %>
+    <%= form.text_area :biography %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,10 +1,168 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+/* General body styling */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* General button styling */
+button {
+  padding: 0; /* Remove padding */
+  font-size: 20px; /* Increase font size */
+  /* Additional styling */
+  background-color: white;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Navigation styling */
+nav {
+  background-color: #4dc6e8;
+  padding: 15px;
+  text-align: center;
+}
+
+nav form {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav input[type="submit"] {
+  background-color: #1abc9c;
+  border: none;
+  color: white;
+  padding: 14px 28px; /* Increased padding for bigger buttons */
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav input[type="submit"]:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+}
+
+/* Inline button forms for CRUD actions */
+.inline-button {
+  display: inline-block;
+  margin: 0 10px 10px 0;  /* More spacing between buttons */
+}
+
+.inline-button input[type="submit"] {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 12px 24px; /* Bigger buttons */
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.inline-button input[type="submit"]:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Extra spacing for Edit buttons */
+.edit-button {
+  margin-right: 15px;
+}
+
+/* Table styling */
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  padding: 15px;
+  border: 1px solid #e1e1e1;
+  text-align: left;
+}
+
+table th {
+  background-color: #4dc6e8;
+  color: white;
+}
+
+/* Headings styling */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form .field {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #1abc9c;
+}
+
+form .actions {
+  text-align: center;
+}
+
+form .actions input[type="submit"] {
+  background-color: #1abc9c;
+  border: none;
+  color: white;
+  padding: 14px 28px; /* Bigger button */
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form .actions input[type="submit"]:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+}
+
+button:hover {
+  background-color: #cff4ff;
+  transform: translateY(-2px);
+}

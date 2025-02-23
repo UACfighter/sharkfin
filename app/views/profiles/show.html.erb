@@ -1,0 +1,9 @@
+<h1>Profile for <%= @profile.user.name %></h1>
+<p>
+  <strong>Country:</strong> <%= @profile.country&.name %>
+</p>
+<p>
+  <strong>Biography:</strong> <%= @profile.biography %>
+</p>
+<%= button_to 'Edit', edit_profile_path(@profile), method: :get, form: { class: 'inline-button' } %>
+<%= button_to 'Back', profiles_path, method: :get, form: { class: 'inline-button' } %>
