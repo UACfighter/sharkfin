@@ -1,4 +1,3 @@
-puts "Seeding Roles..."
 roles = Role.create!([
   { name: 'Admin' },
   { name: 'Editor' },
@@ -7,7 +6,6 @@ roles = Role.create!([
   { name: 'Guest' }
 ])
 
-puts "Seeding Countries..."
 countries = Country.create!([
   { name: 'USA' },
   { name: 'Canada' },
@@ -16,7 +14,6 @@ countries = Country.create!([
   { name: 'Germany' }
 ])
 
-puts "Seeding Statuses..."
 statuses = Status.create!([
   { name: 'Draft' },
   { name: 'Published' },
@@ -25,7 +22,6 @@ statuses = Status.create!([
   { name: 'Rejected' }
 ])
 
-puts "Seeding Categories..."
 categories = Category.create!([
   { name: 'Technology', description: 'All about tech innovations and trends.' },
   { name: 'Health', description: 'Tips and articles on wellness and healthcare.' },
@@ -35,7 +31,6 @@ categories = Category.create!([
   { name: 'Lifestyle', description: 'Daily living, culture, and leisure topics.' }
 ])
 
-puts "Seeding Tags..."
 tags = Tag.create!([
   { name: 'Ruby' },
   { name: 'Rails' },
@@ -46,7 +41,6 @@ tags = Tag.create!([
   { name: 'Database' }
 ])
 
-puts "Seeding Users and Profiles..."
 users = []
 5.times do |i|
   user = User.create!(
@@ -57,18 +51,17 @@ users = []
   Profile.create!(
     user: user,
     country: countries.sample,
-    biography: "This is the biography of User#{i+1}. A passionate contributor to our community."
+    biography: "This is the biography of User#{i+1}."
   )
   users << user
 end
 
-puts "Seeding Posts and Assigning Tags..."
 posts = []
 10.times do |i|
   post = Post.create!(
     user: users.sample,
     title: "Sample Post #{i+1}",
-    content: "This is the content of sample post #{i+1}. It provides some insight into the topic and serves as example content.",
+    content: "This is the content of sample post #{i+1}.",
     category: categories.sample,
     status: statuses.sample
   )
@@ -77,12 +70,11 @@ posts = []
   posts << post
 end
 
-puts "Seeding Comments..."
 10.times do |i|
   Comment.create!(
     post: posts.sample,
     user: users.sample,
-    content: "This is comment #{i+1} on one of the posts. It offers valuable feedback or discussion."
+    content: "This is comment #{i+1} on one of the posts."
   )
 end
 
