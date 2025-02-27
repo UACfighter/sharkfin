@@ -1,8 +1,8 @@
-<h1>Countries</h1>
+<h1>Страны</h1>
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Имя</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -10,12 +10,12 @@
     <% @countries.each do |country| %>
       <tr>
         <td><%= country.name %></td>
-        <td><%= button_to 'Show', country, method: :get, form: { class: 'inline-button' } %></td>
-        <td><%= button_to 'Edit', edit_country_path(country), method: :get, form: { class: 'inline-button' } %></td>
-        <td><%= button_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' }, form: { class: 'inline-button' } %></td>
+        <td><%= button_to 'Показать', country, method: :get, form: { class: 'inline-button' } %></td>
+        <td><%= button_to 'Изменить', edit_country_path(country), method: :get, form: { class: 'inline-button' } %></td>
+        <td><%= button_to 'Удалить', country, method: :delete, data: { confirm: 'Are you sure?' }, form: { class: 'inline-button' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-<%= button_to 'New Country', new_country_path, method: :get, form: { class: 'inline-button' } %>
+<%= button_to 'Добавить страну', new_country_path, method: :get, form: { class: 'inline-button' } %>

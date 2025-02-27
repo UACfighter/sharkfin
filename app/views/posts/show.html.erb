@@ -1,29 +1,29 @@
 <h1><%= @post.title %></h1>
 
 <p>
-  <strong>Author:</strong>
+  <strong>Автор:</strong>
   <%= @post.user.name %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>Категория:</strong>
   <%= @post.category&.name %>
 </p>
 
 <p>
-  <strong>Status:</strong>
+  <strong>Статус:</strong>
   <%= @post.status&.name %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Содержимое:</strong>
   <%= @post.content %>
 </p>
 
 <p>
-  <strong>Tags:</strong>
+  <strong>Тэги:</strong>
   <%= @post.tags.map(&:name).join(", ") %>
 </p>
 
-<%= button_to 'Edit', edit_post_path(@post), method: :get, form: { class: 'inline-button' } %>
-<%= button_to 'Back', posts_path, method: :get, form: { class: 'inline-button' } %>
+<%= button_to 'Изменить', edit_post_path(@post), method: :get, form: { class: 'inline-button' } %>
+<%= button_to 'Назад', posts_path, method: :get, form: { class: 'inline-button' } %>

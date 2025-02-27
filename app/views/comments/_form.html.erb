@@ -11,17 +11,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :post_id, "Post" %>
+    <%= form.label :post_id, "Пост" %>
     <%= form.collection_select :post_id, Post.all, :id, :title, prompt: "Select Post" %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id, "User" %>
+    <%= form.label :user_id, "Пользователь" %>
     <%= form.collection_select :user_id, User.all, :id, :name, prompt: "Select User" %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :content, "Содержимое" %>
     <%= form.text_area :content %>
   </div>
 

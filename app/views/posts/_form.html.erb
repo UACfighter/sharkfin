@@ -11,32 +11,32 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id, "Author" %>
-    <%= form.collection_select :user_id, User.all, :id, :name, prompt: "Select Author" %>
+    <%= form.label :user_id, "Автор" %>
+    <%= form.collection_select :user_id, User.all, :id, :name, prompt: "Выберите автора" %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title, "Название" %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :content, "Содержимое" %>
     <%= form.text_area :content %>
   </div>
 
   <div class="field">
-    <%= form.label :category_id, "Category" %>
-    <%= form.collection_select :category_id, Category.all, :id, :name, prompt: "Select Category" %>
+    <%= form.label :category_id, "Категория" %>
+    <%= form.collection_select :category_id, Category.all, :id, :name, prompt: "Выберите категорию" %>
   </div>
 
   <div class="field">
-    <%= form.label :status_id, "Status" %>
-    <%= form.collection_select :status_id, Status.all, :id, :name, prompt: "Select Status" %>
+    <%= form.label :status_id, "Статус" %>
+    <%= form.collection_select :status_id, Status.all, :id, :name, prompt: "Выберите статус" %>
   </div>
 
   <div class="field">
-    <%= form.label :tag_ids, "Tags" %>
+    <%= form.label :tag_ids, "Тэги" %>
     <%= form.collection_select :tag_ids, Tag.all, :id, :name, {}, { multiple: true } %>
   </div>
 

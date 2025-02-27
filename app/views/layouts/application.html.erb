@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WebApp</title>
+    <%= favicon_link_tag 'NNTU.png', rel: 'icon', type: 'image/png' %>
+    <title>Sharkfin by ChausovND</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,12 +13,11 @@
 
   <body>
     <nav>
-      <%= button_to 'Home', root_path, method: :get, form: { class: 'nav-button' } %>
-      <%= button_to 'Posts', posts_path, method: :get, form: { class: 'nav-button' } %>
-      <%= button_to 'Roles', roles_path, method: :get, form: { class: 'nav-button' } %>
-      <%= button_to 'Countries', countries_path, method: :get, form: { class: 'nav-button' } %>
-      <%= button_to 'Profiles', profiles_path, method: :get, form: { class: 'nav-button' } %>
-      <%= button_to 'Comments', comments_path, method: :get, form: { class: 'nav-button' } %>
+      <%= button_to 'Посты', posts_path, method: :get, form: { class: 'nav-button' } %>
+      <%= button_to 'Роли', roles_path, method: :get, form: { class: 'nav-button' } %>
+      <%= button_to 'Страны', countries_path, method: :get, form: { class: 'nav-button' } %>
+      <%= button_to 'Профили', profiles_path, method: :get, form: { class: 'nav-button' } %>
+      <%= button_to 'Комментарии', comments_path, method: :get, form: { class: 'nav-button' } %>
     </nav>
 
     <%= yield %>

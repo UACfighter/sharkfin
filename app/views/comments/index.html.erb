@@ -1,10 +1,10 @@
-<h1>Comments</h1>
+<h1>Комментарии</h1>
 <table>
   <thead>
     <tr>
-      <th>Post</th>
-      <th>User</th>
-      <th>Content</th>
+      <th>Пост</th>
+      <th>Пользователь</th>
+      <th>Содержимое</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,12 +14,12 @@
         <td><%= comment.post.title %></td>
         <td><%= comment.user.name %></td>
         <td><%= comment.content %></td>
-        <td><%= button_to 'Show', comment, method: :get, form: { class: 'inline-button' } %></td>
-        <td><%= button_to 'Edit', edit_comment_path(comment), method: :get, form: { class: 'inline-button' } %></td>
-        <td><%= button_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, form: { class: 'inline-button' } %></td>
+        <td><%= button_to 'Показать', comment, method: :get, form: { class: 'inline-button' } %></td>
+        <td><%= button_to 'Изменить', edit_comment_path(comment), method: :get, form: { class: 'inline-button' } %></td>
+        <td><%= button_to 'Удалить', comment, method: :delete, data: { confirm: 'Are you sure?' }, form: { class: 'inline-button' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-<%= button_to 'New Comment', new_comment_path, method: :get, form: { class: 'inline-button' } %>
+<%= button_to 'Добавить комментарий', new_comment_path, method: :get, form: { class: 'inline-button' } %>

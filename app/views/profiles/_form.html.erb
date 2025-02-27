@@ -11,17 +11,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id, "User" %>
-    <%= form.collection_select :user_id, User.all, :id, :name, prompt: "Select User" %>
+    <%= form.label :user_id, "Пользователь" %>
+    <%= form.collection_select :user_id, User.all, :id, :name, prompt: "Выберите пользователя" %>
   </div>
 
   <div class="field">
-    <%= form.label :country_id, "Country" %>
-    <%= form.collection_select :country_id, Country.all, :id, :name, prompt: "Select Country" %>
+    <%= form.label :country_id, "Страна" %>
+    <%= form.collection_select :country_id, Country.all, :id, :name, prompt: "Выберите страну" %>
   </div>
 
   <div class="field">
-    <%= form.label :biography %>
+    <%= form.label :biography, "Описание" %>
     <%= form.text_area :biography %>
   </div>
 
